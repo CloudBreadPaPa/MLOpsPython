@@ -47,6 +47,9 @@ def call_web_app(url, headers):
     retries = 600
     for i in range(retries):
         try:
+            print("url :", url)
+            print("input :", input)
+            print("headers :", headers)
             response = requests.post(
                 url, json=input, headers=headers)
             response.raise_for_status()
